@@ -1,6 +1,6 @@
 // General JS for all pages
 document.addEventListener('DOMContentLoaded', function() {
-    // Load user data from localStorage (for logged-in users)
+    // Load user data from localStorag (for logged-in users)
     let user = JSON.parse(localStorage.getItem('user'));
 
     // Redirect to login page if not logged in
