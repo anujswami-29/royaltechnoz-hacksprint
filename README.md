@@ -70,21 +70,33 @@ Frontend: HTML, CSS, JavaScript (with Bootstrap for layout and responsiveness).
 AI/ML: For performance analysis and prediction, using machine learning libraries (such as TensorFlow or Scikit-Learn) to generate predictive models based on student data.
 Backend: Node.js or similar technology (optional, based on your setup).
 Data Integration: The platform can integrate with external data sources (such as IITM portals or manual data entries) to track grades, attendance, and coursework.
-How to Run the Application Locally
+ How to Run the Application Locally
+Follow the steps below to set up the project on your local machine.
+
 Step 1: Clone the Repository
+First, clone the repository to your local machine using the following command:
+
 bash
-Copy code (https://github.com/anujswami-29/royaltechnoz-hacksprint)
+Copy code
+git clone https://github.com/anujswami-29/royaltechnoz-hacksprint.git
+Navigate to the project folder:
+
+bash
+Copy code
 cd royaltechnoz-hacksprint
 Step 2: Install Dependencies (Frontend Only)
+For the frontend part of the application, install all the necessary dependencies by running:
+
 bash
 Copy code
 npm install
 Step 3: Start the Application
+Once the dependencies are installed, start the application by running:
+
 bash
 Copy code
 npm start
-The app will be available at http://localhost:3000 for local testing.
-
+The application will be available at http://localhost:3000 for local testing.
 Contribution Guidelines
 If you'd like to contribute to the development of this project, feel free to fork the repository, create a branch, and submit a pull request. Contributions are welcome for:
 
