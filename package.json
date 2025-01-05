@@ -1,0 +1,21 @@
+{
+  "name": "smart-academic-progress-tracker-with-ai-powered-insights",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
