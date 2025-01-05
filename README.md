@@ -73,9 +73,8 @@ Data Integration: The platform can integrate with external data sources (such as
 How to Run the Application Locally
 Step 1: Clone the Repository
 bash
-Copy code
-git clone https://github.com/your-username/smart-academic-progress-tracker.git
-cd smart-academic-progress-tracker
+Copy code (https://github.com/anujswami-29/royaltechnoz-hacksprint)
+cd royaltechnoz-hacksprint
 Step 2: Install Dependencies (Frontend Only)
 bash
 Copy code
