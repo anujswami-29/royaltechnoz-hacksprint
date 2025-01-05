@@ -1,8 +1,6 @@
 Smart Academic Progress Tracker with AI-Powered Insights
 Project Overview
 The Smart Academic Progress Tracker is a web application designed to assist students in tracking their academic performance, setting and achieving goals, and receiving personalized insights powered by artificial intelligence. The application aims to provide a one-stop platform for students to manage their grades, study habits, and progress toward academic success. It also integrates tools for time management, peer-to-peer tutoring, and motivation boosters, providing a holistic approach to academic improvement. Through AI-driven predictions, the system can anticipate future academic performance and offer actionable recommendations based on a student's current behavior and historical data.
-
-Vision
 The vision behind this project is to transform how students track and improve their academic performance. By leveraging the power of artificial intelligence, this platform empowers students to take control of their educational journey and provides them with personalized insights to enhance their learning experience. The goal is to ensure students not only perform well in their courses but also develop effective study habits, set achievable goals, and stay motivated throughout their academic path.
 
 Features Implemented
@@ -72,12 +70,12 @@ Backend: Node.js or similar technology (optional, based on your setup).
 Data Integration: The platform can integrate with external data sources (such as IITM portals or manual data entries) to track grades, attendance, and coursework.
  How to Run the Application Locally
 Follow the steps below to set up the project on your local machine.
-
+# Smart Academic Progress Tracker with AI-Powered Insights
+## How to Run the Application Locally
 Step 1: Clone the Repository
 First, clone the repository to your local machine using the following command:
 
-bash
-Copy code
+```bash
 git clone https://github.com/anujswami-29/royaltechnoz-hacksprint.git
 Navigate to the project folder:
 
@@ -86,7 +84,6 @@ Copy code
 cd royaltechnoz-hacksprint
 Step 2: Install Dependencies (Frontend Only)
 For the frontend part of the application, install all the necessary dependencies by running:
-
 bash
 Copy code
 npm install
@@ -96,7 +93,7 @@ Once the dependencies are installed, start the application by running:
 bash
 Copy code
 npm start
-The application will be available at http://localhost:3000 for local testing.
+The application will be available at http://localhost:8081 for local testing.
 Contribution Guidelines
 If you'd like to contribute to the development of this project, feel free to fork the repository, create a branch, and submit a pull request. Contributions are welcome for:
 
