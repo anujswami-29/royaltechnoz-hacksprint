@@ -74,8 +74,7 @@ Follow the steps below to set up the project on your local machine.
 ## How to Run the Application Locally
 Step 1: Clone the Repository
 First, clone the repository to your local machine using the following command:
-
-```bash
+ 
 git clone https://github.com/anujswami-29/royaltechnoz-hacksprint.git
 Navigate to the project folder:
 
