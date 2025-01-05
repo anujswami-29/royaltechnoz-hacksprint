@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Friendly Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+     
+     
+<body>
+</head> 
+    <style>
+        /* Add glow effect to schedule boxes */
+        .schedule-box {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .schedule-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            z-index: 10; /* Move the box to the front */
+        }
+
+        /* Change navigation bar color to bright yellow */
+        .navbar {
+            background-color: #FFEB3B !important;
+        }
+
+        /* Styling for the timetable */
+        .schedule-box h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .schedule-box ul {
+            font-size: 1rem;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .schedule-box li {
+            margin-bottom: 8px;
+        }
+        
+        /* Hero Section Styling */
+        .slider-bg {
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-caption {
+            color: #fff;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        } 
+        /* Custom styles for the navigation bar */
+        .navbar {
+            background-color: #FFD700; /* Bright yellow */
+        }
+
+        /* Glow effect and hover effect for resource boxes */
+        .resource-box {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px; /* Optional: rounded corners */
+            overflow: hidden; /* Ensures the glow effect doesn't overflow */
+        }
+
+        .resource-box:hover {
+            transform: translateY(-10px); /* Move the box up */
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Glow effect */
+        }
+
+        /* Centering the carousel captions */
+        .carousel-caption {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust position to truly center */
+            text-align: center; /* Center text */
+        }
+
+        /* Optional: Add some padding and margin for better spacing */
+        .resource-box img {
+            border-radius: 10px 10px 0 0; /* Rounded corners for images */
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa; /* Light background for footer */
+        }
+    
+        
+    </style>
+</head>
+<body>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue rounded-edges shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="https://study.iitm.ac.in/ds/assets/img/IITMOD-Logo.svg" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary ml-auto get-started-btn">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+   <<!-- Hero Section Slider -->
+<div id="heroSlider" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="slider-bg" style="background-image: url('http://s3-ap-southeast-1.amazonaws.com/subscriber.images/jee/2016/06/27064024/IIT-Madras.png');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome to IIT Madras BS Degree</h1>
+                    <p>Specially designed for students</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="slider-bg" style="background-image: url('https://tse3.mm.bing.net/th?id=OIP.oznEFMyjQbRZT8pQT9TMHQHaE7&pid=Api&P=0&h=180');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Student Study Group</h1>
+                    <p>Useful for communications</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="slider-bg" style="background-image: url('https://www.pngmart.com/files/22/Performance-Art-PNG-HD.png');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Performance Predictor</h1>
+                    <p>Works by analyzing previous data and marks</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+            <div class="slider-bg" style="background-image: url('https://tse2.mm.bing.net/th?id=OIP.6Yieelsx34QJlJD_Ww2bVgHaCn&pid=Api&P=0&h=180');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Good Habit Analysis</h1>
+                    <p>What is good and bad during the exams</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+            <div class="slider-bg" style="background-image: url('https://tse1.mm.bing.net/th?id=OIP.wwwNKFhqdRXOhZTrwCYCYgHaER&pid=Api&P=0&h=180');">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Goal Setting & Progress Tracking</h1>
+                    <p>Helps online students to track their progress</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#heroSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#heroSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#heroSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#heroSlider" data-slide-to="1"></li>
+        <li data-target="#heroSlider" data-slide-to="2"></li>
+        <li data-target="#heroSlider" data-slide-to="3"></li>
+        <li data-target="#heroSlider" data-slide-to="4"></li>
+    </ol>
+</div>
+
+<!-- Bootstrap JS, jQuery, and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+<style>
+    /* Ensure full height for carousel and background is covered */
+    .carousel-inner {
+        height: 100vh;
+    }
+
+    /* Centering the carousel caption */
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+
+    .carousel-caption h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .carousel-caption p {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption .btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        background-color: #FFD700;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .carousel-caption .btn:hover {
+        background-color: #FFCC00;
+    }
+</style>
+
+
+    <!-- About Us Section -->
+<section id="about-us" class="container my-5">
+    <div class="row">
+        <!-- Left Side: Tabs and Content -->
+        <div class="col-md-6">
+            <h2 class="text-center mb-4" style="font-size: 2.5rem;">About Us</h2>
+            <!-- Nav Pills -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-company-tab" data-bs-toggle="pill" href="#pills-company" role="tab" aria-controls="pills-company" aria-selected="true">Our Company</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-mission-tab" data-bs-toggle="pill" href="#pills-mission" role="tab" aria-controls="pills-mission" aria-selected="false">Our Mission</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-vision-tab" data-bs-toggle="pill" href="#pills-vision" role="tab" aria-controls="pills-vision" aria-selected="false">Our Vision</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <!-- Company Tab Content -->
+                <div class="tab-pane fade show active" id="pills-company" role="tabpanel" aria-labelledby="pills-company-tab">
+                    <h4>Our Company</h4>
+                    <p>We are a leading organization focused on providing technological solutions that help students excel academically. Our platform integrates data and predictive analytics to help students enhance their performance.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+                <!-- Mission Tab Content -->
+                <div class="tab-pane fade" id="pills-mission" role="tabpanel" aria-labelledby="pills-mission-tab">
+                    <h4>Our Mission</h4>
+                    <p>Our mission is to empower students by providing them with personalized insights, effective study resources, and a supportive community to enhance their learning experience.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+                <!-- Vision Tab Content -->
+                <div class="tab-pane fade" id="pills-vision" role="tabpanel" aria-labelledby="pills-vision-tab">
+                    <h4>Our Vision</h4>
+                    <p>Our vision is to create an academic ecosystem that leverages AI and machine learning to provide students with the tools they need to succeed in their educational journey.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+         
+<!-- Schedule Section -->
+<section class="schedule py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Weekly Timetable</h2>
+        <div class="row">
+            <!-- Box 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="schedule-box bg-danger text-white text-center p-4">
+                    <h5>Monday</h5>
+                    <ul>
+                        <li>Math - 9:00 AM</li>
+                        <li>Science - 11:00 AM</li>
+                        <li>History - 1:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="schedule-box bg-warning text-white text-center p-4">
+                    <h5>Tuesday</h5>
+                    <ul>
+                        <li>Physics - 9:00 AM</li>
+                        <li>Chemistry - 11:00 AM</li>
+                        <li>Literature - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="schedule-box bg-success text-white text-center p-4">
+                    <h5>Wednesday</h5>
+                    <ul>
+                        <li>Math - 9:00 AM</li>
+                        <li>Geography - 12:00 PM</li>
+                        <li>Music - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="schedule-box bg-primary text-white text-center p-4">
+                    <h5>Thursday</h5>
+                    <ul>
+                        <li>Physics - 9:00 AM</li>
+                        <li>Biology - 11:00 AM</li>
+                        <li>Philosophy - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Box 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="schedule-box bg-info text-white text-center p-4">
+                    <h5>Friday</h5>
+                    <ul>
+                        <li>Chemistry - 9:00 AM</li>
+                        <li>History - 11:00 AM</li>
+                        <li>Sports - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Box 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="schedule-box bg-purple text-white text-center p-4">
+                    <h5>Saturday</h5>
+                    <ul>
+                        <li>Literature - 10:00 AM</li>
+                        <li>Math - 12:00 PM</li>
+                        <li>Computer Science - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Box 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="schedule-box bg-dark text-white text-center p-4">
+                    <h5>Sunday</h5>
+                    <ul>
+                        <li>Weekend Rest</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center py-4">
+    <div class="container">
+        <p>&copy; 2025 IIT Madras. All rights reserved. | Designed by YourName</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- What We Do Section -->
+<section id="what-we-do" class="container my-5">
+    <h2 class="text-center mb-4 schedule-heading">What We Do</h2>
+    <div class="row">
+        <!-- Data Collection & Integration Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.zaiMUZOYFnn5HCTqn8lNzQHaHa&pid=Api&P=0&h=180" alt="Data Collection & Integration" class="img-fluid">
+                <h4>Data Collection & Integration</h4>
+                <p>Integration with IITM Portal and manual data entry for seamless grade and attendance tracking.</p>
+            </div>
+        </div>
+        <!-- AI-Powered Analytics Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.1oxfkg_45aaKZ6ra6kK-GQHaHa&pid=Api&P=0&h=180" alt="AI-Powered Analytics" class="img-fluid">
+                <h4>AI-Powered Analytics</h4>
+                <p>Predicts future performance and identifies students at risk based on grades, attendance, and participation patterns.</p>
+            </div>
+        </div>
+        <!-- Personalized Improvement Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.44rhY3UkyIjddmRg9zbquAHaHa&pid=Api&P=0&h=180" alt="Personalized Improvement" class="img-fluid">
+                <h4>Personalized Improvement</h4>
+                <p>Identifies weak areas and suggests improvements to study habits for enhanced performance.</p>
+            </div>
+        </div>
+        <!-- Goal-Setting & Progress Tracking Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.4VZIc2bc9KPDau-aGOVKmAHaDV&pid=Api&P=0&h=180" alt="Goal-Setting & Progress" class="img-fluid">
+                <h4>Goal-Setting & Progress Tracking</h4>
+                <p>Helps students create measurable academic goals and track their progress with motivating notifications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resources Section (with images for subjects) -->
+<section id="resources" class="container my-5">
+    <h2 class="text-center mb-4 schedule-heading">Resources</h2>
+    <div class="row">
+        <!-- English Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.fILPMnUAmAu_tjWoWnIp2AHaEn&pid=Api&P=0&h=180" alt="English" class="img-fluid">
+                <h4>English</h4>
+            </div>
+        </div>
+        <!-- Maths Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.bPLoGSKM5aiqt-AF13LFnAHaHa&pid=Api&P=0&h=180" alt="Maths" class="img-fluid">
+                <h4>Maths</h4>
+            </div>
+        </div>
+        <!-- Computational Thinking Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.Zl36XHmOpNWGECGZQRcbEwHaD4&pid=Api&P=0&h=180" alt="Computational Thinking" class="img-fluid">
+                <h4>Computational Thinking</h4>
+            </div>
+        </div>
+        <!-- Statistics Box -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="resource-box">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.J9m3VOp8ZoDZW38_tmsgjgHaHa&pid=Api&P=0&h=180" alt="Statistics" class="img-fluid">
+                <h4>Statistics</h4>
+            </div>
+        </div>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Analysis of Performance</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js for graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f4f7fa;
+        }
+
+        .start-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Centered vertically */
+            text-align: center;
+        }
+
+        .start-btn {
+            background-color: #FFD700;
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-btn:hover {
+            background-color: #FFCC00;
+        }
+
+        .graph-container {
+            display: none;
+            margin-top: 50px;
+        }
+
+        .graph-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .graph-card {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .improvements {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Start Button Page -->
+    <div class="container start-btn-container">
+        <div>
+            <h1>AI Analysis of Performance Till Now</h1>
+            <button class="start-btn" id="startBtn">Start</button>
+            <!-- Graph and improvements section (hidden initially) -->
+            <div class="graph-container" id="graphContainer">
+                <h2 class="graph-title">Performance Progress</h2>
+                <div class="graph-card">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                <div class="improvements">
+                    <h4>Improvements:</h4>
+                    <p>Based on recent data, performance is improving at an average rate of 5% per month.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Handle the "Start" button click event
+        document.getElementById("startBtn").addEventListener("click", function() {
+            // Show the graph container and improvements section
+            document.getElementById("graphContainer").style.display = "block";
+            // Hide the start button and heading
+            document.querySelector(".start-btn-container h1").style.display = "none";
+            document.getElementById("startBtn").style.display = "none";
+
+            // Create a performance chart with Chart.js
+            var ctx = document.getElementById('performanceChart').getContext('2d');
+            var performanceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                    datasets: [{
+                        label: 'Performance (%)',
+                        data: [60, 65, 70, 75, 80, 85], // Example data (performance data)
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                        borderWidth: 2,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Month'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Performance (%)'
+                            },
+                            min: 0,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+</section>  
+
+</body>
+</html>
